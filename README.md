@@ -1,0 +1,2 @@
+# WaznUQafiya
+WaznUQafiya App
