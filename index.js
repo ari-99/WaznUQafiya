@@ -58,10 +58,40 @@ $("#search-btn").click(() => {
         },
         (data, status) => {
             console.log(data)
-            $("#results .simplebar-content").html(data);
-            $(".word").on();
+            if(data){
+                $("#results .simplebar-content").html(data);
+            } else {
+                $("#results .simplebar-content").html(" ....بەداخەوە! هیچ ووشەیەک نەدۆزرایەوە");
+            }
         })
     }else{
-        $("#results").html("تکایە وشەیەکی گونجاو لەگەڵ ڕادەی لێکچوون دیاری بکە");
+        $("#results .simplebar-content").html("تکایە وشەیەکی گونجاو لەگەڵ ڕادەی لێکچوون دیاری بکە");
     }
-})
+});
+$("#suggest-btn").click(() => {
+    if($("#suggestedWord").val() && $("#suggester").val()){
+        if($("#suggestedWord").val().length > 1){
+            let suggestedWord = $("#suggestedWord").val();
+            let suggester = $("#suggester").val();
+            $.post("Contribute.php",
+            {
+                word: suggestedWord,
+                suggester: suggester
+            },
+            (data, status) => {
+                console.log(data);
+                if(data == 'success'){
+                    alert("پێشنیارەکەت بە سەرکەوتوویی داخڵ کرا!\n...بە زووترین کات لەلایەن ئەدمینەکانەوە پێداچونەوەی بۆ دەکرێت\n!سوپاس بۆ هاوکاریکردنت")    
+                }else if(data == 'duplicate entry'){
+                    alert("سوپاس بۆ هاوکاریکردنت بەڵام ئەم ووشەیە پێشتر داخڵ کراوە!\nچاوەڕێی ئەدمینەکان ببە هەتا ئەوکاتەی پێداچوونەوەی بۆ دەکەن...");
+                }else if(data == 'duplicate db entry'){
+                    alert("سوپاس بۆ هاوکاریکردنت بەڵام ئەم ووشەیە پێشتر داخڵ کراوە!");
+                }
+            })
+        }else{
+            alert("!ووشەکە نابێت لە 2 پیت کەمتر بێت");
+        }
+    } else{
+        alert("تکایە هەموو بۆکسەکان پڕبکەرەوە")
+    }
+});

@@ -1,5 +1,6 @@
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "WuQ") or die("problem connecting to database!");
+require_once("dbConn.php");
+if(isset($_POST['substr'])){
     $substr = $_POST['substr'];
     $numLetters = $_POST['lettersNo'];
     // echo "SELECT word, CASE WHEN substr(word, -" . $numLetters . ") = '' THEN NULL WHEN substr(word, -" . $numLetters . ") != '" . $substr . "' THEN NULL ELSE TRUE END AS word1 FROM wordlist HAVING word1 IS NOT NULL;";
@@ -8,3 +9,4 @@
     while($res = $result -> fetch_assoc()){
         echo '<span class="word" data-clipboard-text="' . $res['word'] . '">' . $res['word'] . '</span>';
     }
+}
