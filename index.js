@@ -22,21 +22,21 @@ clipboard.on('success', function (e) {
 clipboard.on('error', function (e) {
     console.log(e);
 });
-$(window).scroll(function (e) {
-    console.log(window.pageYOffset)
-    if (window.pageYOffset > 1) {
-        $("div.header").stop();
-        $("div.header").animate({
-            height: '10px'
-        });
-    } else if(window.pageYOffset == 0) {
-        $("div.header").stop();
-        $(window).scrollTop();
-        $("div.header").animate({
-            height: '170px'
-          });
-    }
-});
+// $(window).scroll(function (e) {
+//     console.log(window.pageYOffset)
+//     if (window.pageYOffset > 1) {
+//         $("div.header").stop();
+//         $("div.header").animate({
+//             height: '10px'
+//         });
+//     } else if(window.pageYOffset == 0) {
+//         $("div.header").stop();
+//         $(window).scrollTop();
+//         $("div.header").animate({
+//             height: '170px'
+//           });
+//     }
+// });
 $("#word").keyup(e => { 
     let currLength = $(e.target).val().length;
     $("#rhymablility").attr("max", currLength);

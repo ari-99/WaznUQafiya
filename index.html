@@ -32,9 +32,38 @@
         <button type="button" id="search-btn" class="btn btn-primary">گەڕان</button>
     </div>
     <div id="results"  data-simplebar>
-        بە دڵی خۆت ووشەیەک لە سەرەوە داخڵ بکە و ڕادەی لێکچوونی خوازراو دیاری بکە و دەست بکە بە هۆنینەوە <br> <span style="transform: rotate(90deg);display: inline-block;font-size: 45px;">:)</span>
+     بە دڵی خۆت ووشەیەک لە سەرەوە داخڵ بکە و ڕادەی لێکچوونی خوازراو دیاری بکە و دەست بکە بە هۆنینەوە<br><span class="smileyFace">:)</span>
     </div>
     <small id="helpId-copy" class="form-text text-muted">کلیک بکە یان پەنجە بنێ بە هەر وشەیەکدا بۆ ڕاستەوخۆ کۆپی کردنی</small>
+    <hr class="style14">
+    <div id="suggestWrapper" class="container-fluid">
+        <small id="helpId-copy" dir="rtl" class="form-text text-muted">ئەگەرچی <span style="color: #283847;">وەزن و قافیە</span> هێشتا بچووکە،
+             بەڵام لەوانەیە تاکە هیوا بێت بۆ شاعیرێک یان گۆرانیبێژێکی تازە دەستپێکردوو کە ئەگەری هەیە تەنیا کێش و سەروای یەک ووشە بوو بێتە هۆی سنووردارکردنی تواناکانی <br>   تۆش ئەتوانیت یارمەتیدەربیت بە پێشنیارکردنی ووشەیەک...</small>
+            
+             <div class="inputs">
+                 <label>ناو  
+                     <input type="text" class="form-control" name="" dir="rtl" id="suggestor" aria-describedby="helpId" placeholder="">
+                     <small id="helpId" class="form-text text-muted"> ئەو ناوەی کە دەردەکەوێت لە ڕیزبەندی زۆرترین بەشداربوون </small>
+                 </label>
+                 
+                 <label>ووشە
+                     <input type="text" class="form-control" name="" dir="rtl" id="suggestedWord" aria-describedby="helpId" placeholder="">
+                     <small id="helpId" class="form-text text-muted">ئەو وشەیەی کە دەتەوێت پێشنیاری بکەیت</small>
+                 </label>
+             </div>
+            <button type="button" id="suggest-btn" class="btn btn-secondary">پێشنیار بکە</button>
+    </div>
+    <hr class="style14">
+    <div id="topContributersWrapper" class="container-fluid">
+        <h3 id="topContHeading">ڕیزبەندی زۆرترین بەشداربوون</h3>
+        <ul id="topContributers" class="list-group-item">
+            <li class="list-group-item list-group-item-warning">Tofiq <span class="noOfContributions">42</span></li>
+            <li class="list-group-item list-group-item-success">Rafiq <span class="noOfContributions">33</span></li>
+            <li class="list-group-item list-group-item-primary">Shafiq <span class="noOfContributions">23</span></li>
+        </ul>
+    </div>
+
+    <hr class="style14">
     <div class="links">
         <a target="_blank" href="https://github.com/ari-99/WaznUQafiya" aria-placeholder="My Project is open-source! :)"><i class="fab fa-github"></i></a>
         <a target="_blank" href="https://www.facebook.com/ary56"><i class="fab fa-facebook"></i></a>
