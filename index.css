@@ -118,3 +118,15 @@ output {
     bottom: 0;
     right: 5px;
 }
+.links svg{
+    font-size: 41px;
+}
+.links a{
+    margin: 5px;
+    /* width: max-content; */
+}
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
