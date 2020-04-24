@@ -1,0 +1,110 @@
+* {
+    text-align: right;
+    color: #283847;
+}
+
+body {
+    padding-bottom: 20px;
+}
+
+div.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    text-align: center;
+    font-size: 50px;
+    border-radius: 0;
+    background: #283847;
+    padding: 10px;
+    overflow: hidden;
+    transition: alls 0.5s linear;
+    -moz-transition: alls 0.5s linear; /* Firefox 4 */
+    -webkit-transition: alls 0.5s linear; /* Safari and Chrome */
+    -o-transition: alls 0.5s linear; /* Opera */
+    -ms-transition: alls 0.5s linear; /* Explorer 10 */
+}
+button#search-btn:hover{
+    background: whitesmoke;
+    border-color: #283847;
+    color: #283847;
+}
+button#search-btn:focus{
+    box-shadow: none;
+}
+button#search-btn{
+    background: #283847;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    transition: 0.2s ease-in;
+}
+#logo {
+    height: 150px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    /* flex-wrap: wrap; */
+    flex-flow: wrap-reverse;
+}
+
+.inputs label {
+    margin: 10px 25px;
+}
+
+.inputs #rangeLbl {
+    flex-basis: 300px;
+}
+
+.container-fluid {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.container-fluid button {
+    width: 150px;
+}
+
+#results {
+    font-size: 23px;
+    margin-top: 50px;
+    text-align: center;
+    max-height: 200px;
+    overflow: auto;
+    /* color: whitesmoke; */
+}
+
+#helpId-copy{
+    text-align: center;
+}
+
+.word {
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 2px;
+    transition: all 0.2s ease-in;
+    margin: 5px;
+}
+
+.word:hover {
+    background: #283847;
+    color: whitesmoke;
+    /* margin-left: 90px; */
+}
+
+.header-collapse {
+    /* top: -20px; */
+    height: 10px;
+    /* transition: all 0.5s ease-in; */
+}
+
+.header-collapse img {
+    /* visibility: hidden */
+}
+output {
+    display: block;
+    text-align: center;
+}

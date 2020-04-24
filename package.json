@@ -1,0 +1,27 @@
+{
+  "name": "waznwqafiya",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "index.js",
+  "dependencies": {
+    "clipboard": "^2.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ari-99/WaznUQafiya.git"
+  },
+  "keywords": [
+    "Poem",
+    "Poets"
+  ],
+  "author": "Ari Qaradaghi",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ari-99/WaznUQafiya/issues"
+  },
+  "homepage": "https://github.com/ari-99/WaznUQafiya#readme"
+}

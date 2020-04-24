@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="node_modules/simplebar/dist/simplebar.css">
+    <link rel="stylesheet" href="index.css">
+    <title>وەزن و قافییە</title>
+</head>
+<body>
+    <div class="header">
+        <img src="resources/splash.png" alt="" id="logo">
+        <!-- وەزن و قافییە -->
+    </div>
+    <div class="inputs">
+        <label id="rangeLbl">
+            :ڕادەی لێکچوون
+              <input type="range" class="form-control-range" name="" id="rhymablility" aria-describedby="helpId" placeholder="" oninput="rhymablilityVal.value = rhymablility.value"><output id="rhymablilityVal">12</output>
+              <small id="helpId" class="form-text text-muted">ڕادەی لێکچوونی وشەکان</small>
+        </label>
+        <label>
+            :ووشە
+              <input type="text" class="form-control" name="" id="word" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">ئەو وشەیەی کە دەتەوێت کێش و سەرواکەی بۆ بدۆزیتەوە</small>
+        </label>
+    </div>
+    <div class="container-fluid">
+        <button type="button" id="search-btn" class="btn btn-primary">گەڕان</button>
+    </div>
+    <p id="results" class="container-fluid" data-simplebar>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+        <span class="word" data-clipboard-text="سەما">سەما</span> <span class="word"  data-clipboard-text="لەما">لەما</span>
+    </p>
+    <small id="helpId-copy" class="form-text text-muted">کلیک بکە یان پەنجە بنێ بە هەر وشەیەکدا بۆ ڕاستەوخۆ کۆپی کردنی</small>
+    <script src="node_modules/simplebar/dist/simplebar.js"></script>
+    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
