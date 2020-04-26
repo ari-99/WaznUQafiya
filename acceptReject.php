@@ -18,6 +18,23 @@
                 echo "success";
             }
         } 
+    } else if(isset($_POST['poem'])){
+        $poem = $_POST['poem'];
+        $poet = $_POST['poet'];
+        $action = $_POST['action'];
+        // echo "SELECT word, CASE WHEN word(word, -" . $numLetters . ") = '' THEN NULL WHEN word(word, -" . $numLetters . ") != '" . $word . "' THEN NULL ELSE TRUE END AS word1 FROM wordlist HAVING word1 IS NOT NULL;";
+        if($action == "accept"){
+            $result = $conn -> query("INSERT INTO poems(poem, poet) VALUES('$poem', '$poet')") or die("insert failed");
+            if($result){
+                echo "success";
+                $conn -> query("DELETE FROM pending_poems WHERE poem = '$poem'") or die("delete failed");
+            }
+        }else if($action == "reject"){
+            $result = $conn -> query("DELETE FROM pending_poems WHERE poem = '$poem'") or die("delete failed");
+            if($result){
+                echo "success";
+            }
+        } 
     }
 
 ?>

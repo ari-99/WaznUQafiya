@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/uncak7iceokumpnygjknx7jj1mfysniqh98okllbgfy9mhor/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({selector:'textarea'});</script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/simplebar/dist/simplebar.css">
@@ -62,14 +64,14 @@
             <label>ووشە
                 <input type="text" required class="form-control" name="" dir="rtl" id="suggestedWord"
                     aria-describedby="helpId" placeholder="">
-                <small id="helpId" class="form-text text-muted">ئەو وشەیەی کە دەتەوێت پێشنیاری بکەیت</small>
+                <small id="helpId" class="form-text text-muted"> ئەو وشەیەی کە دەتەوێت پێشنیاری بکەیت بە فۆنتی کوردی</small>
             </label>
         </form>
         <button type="button" id="suggest-btn" class="btn btn-secondary">پێشنیار بکە</button>
     </div>
     <hr class="style14">
     <div id="topcontributorsWrapper" class="container-fluid">
-        <h3 id="topContHeading">ڕیزبەندی زۆرترین بەشداربوون</h3>
+        <h3 class="heading">زۆرترین بەشداربوون</h3>
         <ul id="topcontributors" class="list-group-item">
             <?php
                 require_once("dbConn.php");
@@ -91,11 +93,35 @@
             
         </ul>
     </div>
-
+    <hr class="style14">
+    <div id="showcaseWrapper" class="container-fluid">
+        <h4 class="heading">گوڵ بژێرێک لەو هۆنراوانەی بە یارمەتی وەزن و قافیە نووسراون</h3>
+        <div id="showcaseContentWrapper">
+                <div id="rightArrow"></div>
+                <div id="showcaseContent" class="container-fluid">
+                    <?php
+                        $poemQueryPID = $conn -> query("SELECT pid FROM poems ORDER BY pid DESC LIMIT 1");
+                        if(mysqli_num_rows($poemQueryPID) == 1){
+                            $PID = $poemQueryPID -> fetch_assoc();
+                            echo "<script>var pid = {$PID['pid']}</script>";
+                            $poemQuery = $conn -> query("SELECT * FROM `poems` WHERE pid = {$PID['pid']}");
+                            if(mysqli_num_rows($poemQuery) == 1){
+                                $poem = $poemQuery -> fetch_assoc();
+                                echo $poem['poem'] . '<h4 id="author">' . $poem['poet'] . '-</h4>';
+                            }
+                        }
+                    ?>
+                </div>
+                <div id="leftArrow"></div>
+        </div>
+        <div id="submitPoemWrapper" class="inputs">
+        </div>
+        <button type="button" name="" id="submitPoem" class="btn btn-dark" btn-lg btn-block">هۆنراوای خۆتمان بۆ بنێرە</button>
+    </div>
     <hr class="style14">
     <div class="links">
         <a target="_blank" href="https://github.com/ari-99/WaznUQafiya"
-            aria-placeholder="My Project is open-source! :)"><i class="fab fa-github"></i></a>
+            placeholder="Wazn w Qafiya is open-source! :)"><i class="fab fa-github"></i></a>
         <a target="_blank" href="https://www.facebook.com/ary56"><i class="fab fa-facebook"></i></a>
         <a target="_blank" href="https://twitter.com/arriii99"><i class="fab fa-twitter"></i></a>
     </div>

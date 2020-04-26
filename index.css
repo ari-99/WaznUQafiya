@@ -130,8 +130,26 @@ output {
     right: 5px;
 }
 
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .links svg {
     font-size: 41px;
+}
+
+.links a[href="https://twitter.com/arriii99"]:hover svg path {
+    color: #1DA1F2;
+}
+
+.links a[href="https://www.facebook.com/ary56"]:hover svg path {
+    color: #4267B2;
+}
+
+.links a[href="https://github.com/ari-99/WaznUQafiya"]:hover svg path {
+    color: #24292E;
 }
 
 .links a {
@@ -139,11 +157,6 @@ output {
     /* width: max-content; */
 }
 
-.links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .smileyFace {
     transform: translateX(7px) rotate(90deg);
@@ -151,22 +164,19 @@ output {
     font-size: 45px;
 }
 
-hr.style14 {
-    margin: 30px 10px 10px 10px;
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-}
-
 #suggest-btn {
     margin: 15px 0;
 }
 
-#topContHeading {
+.heading {
     margin: 15px 15px;
+}
+
+#showcaseWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #topcontributors li {
@@ -177,9 +187,11 @@ hr.style14 {
     align-items: center;
     height: 50px;
 }
+
 #topcontributors {
     min-width: 300px;
 }
+
 #topcontributorsWrapper {
     margin: auto;
     display: flex;
@@ -188,7 +200,8 @@ hr.style14 {
     align-items: center;
     flex-direction: column;
 }
-.noOfContributions{
+
+.noOfContributions {
     color: whitesmoke;
     background: #ff5959;
     padding: 3px;
@@ -201,4 +214,135 @@ hr.style14 {
     font-size: 17px;
     /* position: relative; */
     /* left: 0; */
+}
+
+#showcaseContentWrapper {
+    position: relative;
+    padding: 0 30px;
+}
+
+#showcaseContent p {
+    padding: 5px;
+    text-shadow: -5px 4px 6px #2838477a;
+}
+
+#author {
+    margin-left: 15px;
+    text-align: left;
+    font-style: italic;
+}
+
+#showcaseContent {
+    /* background: red; */
+}
+#TA{
+    flex-basis: max-content;
+}
+#poetLbl{
+    flex-basis: 514px;
+}
+#submitPoem{
+    width: max-content;
+}
+#rightArrow {
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid #283847;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 18px);
+    cursor: pointer;
+}
+
+#leftArrow {
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 18px solid #283847;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 18px);
+    cursor: pointer;
+}
+
+/* HORIZONTAL RULE */
+hr.style14 {
+    margin: 30px 10px 10px 10px;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+/* LOADING */
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #283847;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
 }

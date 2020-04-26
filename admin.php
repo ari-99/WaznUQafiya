@@ -57,6 +57,35 @@ if($_GET['pwd'] != '2c8d72a50650b58af33d5206147fe9d6c12856b87c655ca2a979f2db'){
             </tbody>
         </table>
     </div>
+    <div class="container-fluid">
+        <h3>هۆنراوە داخڵکراوەکان</h3>
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>ڕەتکردنەوە</th>
+                    <th>وەرگرتن</th>
+                    <th>هۆنراوە</th>
+                    <th>شاعیر</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $pending_poems = $conn -> query("SELECT * FROM pending_poems");
+                    if(mysqli_num_rows($pending_poems) > 0){
+                        while($pending_poem = $pending_poems -> fetch_assoc()){
+                            echo '<tr>
+                            <td><button type="button" name="" id="reject" class="btn btn-danger" btn-lg btn-block data-poet="' . $pending_poem['poet'] . '"">ڕەتکردنەوە</button></td>
+                            <td><button type="button" name="" id="accept" class="btn btn-success" btn-lg btn-block  data-poet="' . $pending_poem['poet'] . '"">وەرگرتن</button></td>
+                                <td class="poem" scope=" row">' . $pending_poem['poem'] . '</td>
+                                <td scope=" row">' . $pending_poem['poet'] . '</td>
+                            </tr>';
+                        }
+                    }
+                ?>
+                
+            </tbody>
+        </table>
+    </div>
     <hr class="style14">
     <div class="links">
         <a target="_blank" href="https://github.com/ari-99/WaznUQafiya"
