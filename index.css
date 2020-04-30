@@ -1,35 +1,31 @@
 * {
-    text-align: right;
+    direction: rtl ;
+    text-align:right;
     color: #283847;
 }
 
 body {
     padding-bottom: 20px;
     text-align: center;
+    
+}
+.sections{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
+    overflow: auto;
+    position: relative;
 }
 
-div.header {
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    height: fit-content;
-    text-align: center;
-    font-size: 50px;
-    border-radius: 0;
-    background: #283847;
-    padding: 10px;
-    overflow: hidden;
-    transition: alls 0.5s linear;
-    -moz-transition: alls 0.5s linear;
-    /* Firefox 4 */
-    -webkit-transition: alls 0.5s linear;
-    /* Safari and Chrome */
-    -o-transition: alls 0.5s linear;
-    /* Opera */
-    -ms-transition: alls 0.5s linear;
-    /* Explorer 10 */
+body > div.sections{
+    height:  80vh;
+    min-height: 80vh;
+}
+body > div.sections ~ div.sections{
+    min-height: 100vh;
+    height:  max-content;
+    /* min-height:  max-content; */
 }
 
 button#search-btn:hover {
@@ -49,16 +45,14 @@ button#search-btn {
     transition: 0.2s ease-in;
 }
 
-#logo {
-    height: 150px;
-}
+
 
 .inputs {
     display: flex;
     justify-content: space-evenly;
     justify-items: center;
-    /* flex-wrap: wrap; */
-    flex-flow: wrap-reverse;
+    flex-wrap: wrap;
+    /* flex-flow: wrap-reverse; */
 }
 
 .inputs label {
@@ -111,7 +105,7 @@ button#search-btn {
     /* margin-left: 90px; */
 }
 
-.header-collapse {
+.nav-collapse {
     /* top: -20px; */
     height: 10px;
     /* transition: all 0.5s ease-in; */
@@ -159,7 +153,7 @@ output {
 
 
 .smileyFace {
-    transform: translateX(7px) rotate(90deg);
+    transform: translateX(7px) rotate(-90deg);
     display: inline-block;
     font-size: 45px;
 }
@@ -233,7 +227,9 @@ output {
 }
 
 #showcaseContent {
-    /* background: red; */
+    max-height: 400px;
+    overflow-y: auto;
+    flex-basis: content;
 }
 #TA{
     flex-basis: max-content;
@@ -243,6 +239,7 @@ output {
 }
 #submitPoem{
     width: max-content;
+    margin-bottom: 10px;
 }
 #rightArrow {
     width: 0;
@@ -255,7 +252,9 @@ output {
     top: calc(50% - 18px);
     cursor: pointer;
 }
-
+textarea{
+    width: 100%;
+}
 #leftArrow {
     width: 0;
     height: 0;
@@ -268,7 +267,17 @@ output {
     cursor: pointer;
 }
 
+h6{
+    text-align: center;
+    margin: 20px 5px 0 5px;
+}
+
 /* HORIZONTAL RULE */
+.sections hr.style14 {
+    position: absolute;
+    bottom: 0;
+    left: 20vw;
+}
 hr.style14 {
     margin: 30px 10px 10px 10px;
     border: 0;
@@ -277,6 +286,8 @@ hr.style14 {
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    width: 60vw;
+    margin: auto;
 }
 
 /* LOADING */

@@ -15,7 +15,7 @@ $("#submitPoem").click(() => {
         </small>
     </label>
     <label id="TA">هۆنراوە
-    <textarea name="" id="" class="form-control" cols="50" rows="10"></textarea>
+    <textarea name="" id="" class="form-control" cols="10" rows="10"></textarea>
     <small id="helpId" class="form-text text-muted">هۆنراوەکەت بە فۆنتی کوردی
         </small>
     </label>`);
@@ -24,8 +24,13 @@ $("#submitPoem").click(() => {
         language: 'ku_IQ',
         directionality: 'rtl',
         tinycomments_mode: 'embedded',
-        tinycomments_author: 'Ari Qaradaghi'
+        tinycomments_author: 'Ari Qaradaghi',
+        mobile: {
+            theme: 'mobile', 
+            menubar: false
+        },
     });
+    // $(this).closest('.sections').css('height', 'max-content')
     $("#submitPoem").off();
     $("#submitPoem").click(() => {
         if (tinyMCE.activeEditor.getContent() && $("#poet").val()) {
@@ -51,6 +56,7 @@ $("#submitPoem").click(() => {
             alert("تکایە هەموو بۆکسەکان پڕبکەرەوە")
         }
     });
+    
 })
 // $(".word").on("mouseout", e => {
 //     $(".word").css("opacity", "");
@@ -64,21 +70,7 @@ $("#submitPoem").click(() => {
 clipboard.on('error', function (e) {
     console.log(e);
 });
-// $(window).scroll(function (e) {
-//     console.log(window.pageYOffset)
-//     if (window.pageYOffset > 1) {
-//         $("div.header").stop();
-//         $("div.header").animate({
-//             height: '10px'
-//         });
-//     } else if(window.pageYOffset == 0) {
-//         $("div.header").stop();
-//         $(window).scrollTop();
-//         $("div.header").animate({
-//             height: '170px'
-//           });
-//     }
-// });
+
 $("#word").keyup(e => {
     let currLength = $(e.target).val().length;
     $("#rhymablility").attr("max", currLength);
@@ -144,7 +136,7 @@ $("#suggest-btn").click(() => {
 $("#rightArrow, #leftArrow").click(e => {
     let currPoem = $("#showcaseContent").html();
     let arrow = $(e.target).attr('id');
-    $("#showcaseContent").html('<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>')
+    $("#showcaseContent ").html('<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>')
     $.post(
         'GETpoem.php', {
             arrow: arrow,
@@ -154,14 +146,14 @@ $("#rightArrow, #leftArrow").click(e => {
             console.log(status);
             console.log(pid);
             if (data != 'none') {
-                $("#showcaseContent").html(data);
+                $("#showcaseContent ").html(data);
                 if (arrow.includes('right')) {
                     $("#leftArrow").toggle(true);
                 } else {
                     $("#rightArrow").toggle(true);
                 }
             } else {
-                $("#showcaseContent").html(currPoem);
+                $("#showcaseContent ").html(currPoem);
                 if (arrow.includes('right')) {
                     $("#rightArrow").toggle(false);
                 } else {

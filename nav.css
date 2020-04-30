@@ -1,0 +1,115 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 20vh;
+}
+
+#logo {
+    height: 100%;
+    object-fit: scale-down;
+    flex-grow: 1.5;
+}
+
+.nav a {
+    flex-grow: 2;
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    /* flex-direction: column; */
+    border-radius: 0;
+    background: #283847;
+    height: 20vh;
+    /* padding: 10px; */
+    overflow: hidden;
+    transition: alls 0.5s linear;
+    -moz-transition: alls 0.5s linear;
+    /* Firefox 4 */
+    -webkit-transition: alls 0.5s linear;
+    /* Safari and Chrome */
+    -o-transition: alls 0.5s linear;
+    /* Opera */
+    -ms-transition: alls 0.5s linear;
+    /* Explorer 10 */
+}
+
+.nav a:hover {
+    background: #405264;
+    /* border-bottom: 3px solid white; */
+    border-width: 3px;
+}
+
+.nav a {
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* background: red; */
+    display: none;
+    font-size: 28px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+    transition: 0.2s ease-in;
+    border-bottom: 0px solid white;
+
+}
+
+.nav a.activeLink {
+    border-bottom: 3px solid white;
+    background: #405264;
+}
+nav.a:nth-child(1){
+    display: none;
+}
+
+@media only screen and (max-width: 634px) {
+    nav.a:nth-child(1){
+        display: unset;
+    }
+    .nav {
+        flex-direction: column;
+
+        height: unset;
+    }
+
+    #logo {
+        height: 150px;
+    }
+
+    .nav a {
+        width: 100%;
+        text-align: center;
+        /* display: none; */
+    }
+
+    .nav a.activeLink {
+        /* border-bottom: none; */
+        /* border-right: 12px solid white; */
+    }
+
+    .downArrow {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid whitesmoke;
+        margin: 5px auto;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+    .collapsed{
+        transform: rotate(180deg);
+    }
+}

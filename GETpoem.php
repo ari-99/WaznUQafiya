@@ -14,7 +14,7 @@
             $poemQuery = $conn -> query("SELECT * FROM `poems` WHERE pid = {$PID['pid']}");
             if(mysqli_num_rows($poemQuery) == 1){
                 $poem = $poemQuery -> fetch_assoc();
-                echo $poem['poem'] . '<h4 id="author">' . $poem['poet'] . '-</h4>';
+                echo $poem['poem'] . '<h4 id="author">-' . $poem['poet'] . '</h4>';
             }
         }else{
             echo 'none';
