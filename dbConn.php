@@ -1,5 +1,5 @@
 <?php 
-    $conn = mysqli_connect("localhost", "root", "", "WuQ") or die("problem connecting to database!");
+    $conn = mysqli_connect("localhost", "root", "12345", "wwq") or die("problem connecting to database!");
 
     foreach($_POST as $key => $value){
         if(isset($_POST['type'])){

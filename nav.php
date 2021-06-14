@@ -1,6 +1,7 @@
 <div class="nav">
     <span id="copyright">©Ari Qaradaghi</span>
-    <img src="resources/LOGO.svg" alt="" id="logo">
+    <!-- <img src="resources/LOGO.svg" alt="" id="logo"> -->
+    <img src="resources/splash.png" alt="" id="logo">
     <a href='#' class="activeLink" onclick="window.scroll({top: 10, left: 0, behavior: 'smooth'});">هۆنینەوە</a>
     <a href="#helpId-copy" >پێشنیارکردن</a>
     <a href="#contributeHR">شیعرەکان</a>

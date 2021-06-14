@@ -26,7 +26,7 @@ $("#submitPoem").click(() => {
         tinycomments_mode: 'embedded',
         tinycomments_author: 'Ari Qaradaghi',
         mobile: {
-            theme: 'mobile', 
+            theme: 'mobile',
             menubar: false
         },
     });
@@ -37,9 +37,9 @@ $("#submitPoem").click(() => {
             let poem = tinyMCE.activeEditor.getContent();
             let poet = $("#poet").val();
             $.post("sendPoem.php", {
-                    poem: poem,
-                    poet: poet
-                },
+                poem: poem,
+                poet: poet
+            },
                 (data, status) => {
                     console.log(data);
                     if (data == 'success') {
@@ -56,7 +56,7 @@ $("#submitPoem").click(() => {
             alert("تکایە هەموو بۆکسەکان پڕبکەرەوە")
         }
     });
-    
+
 })
 // $(".word").on("mouseout", e => {
 //     $(".word").css("opacity", "");
@@ -87,9 +87,9 @@ $("#search-btn").click(() => {
         let substr = word.substr(word.length - rhymablility);
         //Not sure if rhymability is a word :/
         $.post("getWords.php", {
-                substr: substr,
-                lettersNo: rhymablility
-            },
+            substr: substr,
+            lettersNo: rhymablility
+        },
             (data, status) => {
                 console.log(data)
                 if (data) {
@@ -109,9 +109,9 @@ $("#suggest-btn").click(() => {
                 let suggestedWord = $("#suggestedWord").val();
                 let suggester = $("#suggester").val();
                 $.post("Contribute.php", {
-                        word: suggestedWord,
-                        suggester: suggester
-                    },
+                    word: suggestedWord,
+                    suggester: suggester
+                },
                     (data, status) => {
                         console.log(data);
                         if (data == 'success') {
@@ -139,9 +139,9 @@ $("#rightArrow, #leftArrow").click(e => {
     $("#showcaseContent ").html('<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>')
     $.post(
         'GETpoem.php', {
-            arrow: arrow,
-            pid: pid
-        },
+        arrow: arrow,
+        pid: pid
+    },
         (data, status) => {
             console.log(status);
             console.log(pid);
@@ -162,4 +162,19 @@ $("#rightArrow, #leftArrow").click(e => {
             }
         }
     )
+});
+
+var swiper = new Swiper(".mySwiper", {
+    autoplay: {
+        delay: 5000,
+    },
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 });

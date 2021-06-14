@@ -1,5 +1,5 @@
 <?php
-if($_GET['pwd'] != '2c8d72a50650b58af33d5206147fe9d6c12856b87c655ca2a979f2db'){
+if ($_GET['pwd'] != '2c8d72a50650b58af33d5206147fe9d6c12856b87c655ca2a979f2db') {
     header("Location: https://google.com");
     exit();
 }
@@ -11,8 +11,7 @@ if($_GET['pwd'] != '2c8d72a50650b58af33d5206147fe9d6c12856b87c655ca2a979f2db'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/simplebar/dist/simplebar.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="admin.css">
@@ -22,9 +21,11 @@ if($_GET['pwd'] != '2c8d72a50650b58af33d5206147fe9d6c12856b87c655ca2a979f2db'){
 
 <body>
     <div class="header">
-        <img src="resources/splash.png" alt="" id="logo">
-        <h3 style="color: whitesmoke">Admin Panel</h3>
-        <span id="copyright">©Ari Qaradaghi</span>
+        <div>
+            <img src="resources/splash.png" alt="" id="logo">
+            <h3 style="color: whitesmoke">Admin Panel</h3>
+            <span id="copyright">Ari Qaradaghi©</span>
+        </div>
     </div>
 
     <div class="container-fluid">
@@ -40,20 +41,20 @@ if($_GET['pwd'] != '2c8d72a50650b58af33d5206147fe9d6c12856b87c655ca2a979f2db'){
             </thead>
             <tbody>
                 <?php
-                    require_once("dbConn.php");
-                    $pending_words = $conn -> query("SELECT * FROM pending_words");
-                    if(mysqli_num_rows($pending_words) > 0){
-                        while($pending_word = $pending_words -> fetch_assoc()){
-                            echo '<tr>
+                require_once("dbConn.php");
+                $pending_words = $conn->query("SELECT * FROM pending_words");
+                if (mysqli_num_rows($pending_words) > 0) {
+                    while ($pending_word = $pending_words->fetch_assoc()) {
+                        echo '<tr>
                             <td><button type="button" name="" id="reject" class="btn btn-danger" btn-lg btn-block data-word="' . $pending_word['word'] . '" data-contributor="' . $pending_word['suggester'] . '"">ڕەتکردنەوە</button></td>
                             <td><button type="button" name="" id="accept" class="btn btn-success" btn-lg btn-block data-word="' . $pending_word['word'] . '" data-contributor="' . $pending_word['suggester'] . '"">وەرگرتن</button></td>
                                 <td scope=" row">' . $pending_word['word'] . '</td>
                                 <td scope=" row">' . $pending_word['suggester'] . '</td>
                             </tr>';
-                        }
                     }
+                }
                 ?>
-                
+
             </tbody>
         </table>
     </div>
@@ -70,26 +71,25 @@ if($_GET['pwd'] != '2c8d72a50650b58af33d5206147fe9d6c12856b87c655ca2a979f2db'){
             </thead>
             <tbody>
                 <?php
-                    $pending_poems = $conn -> query("SELECT * FROM pending_poems");
-                    if(mysqli_num_rows($pending_poems) > 0){
-                        while($pending_poem = $pending_poems -> fetch_assoc()){
-                            echo '<tr>
+                $pending_poems = $conn->query("SELECT * FROM pending_poems");
+                if (mysqli_num_rows($pending_poems) > 0) {
+                    while ($pending_poem = $pending_poems->fetch_assoc()) {
+                        echo '<tr>
                             <td><button type="button" name="" id="reject" class="btn btn-danger" btn-lg btn-block data-poet="' . $pending_poem['poet'] . '"">ڕەتکردنەوە</button></td>
                             <td><button type="button" name="" id="accept" class="btn btn-success" btn-lg btn-block  data-poet="' . $pending_poem['poet'] . '"">وەرگرتن</button></td>
                                 <td class="poem" scope=" row">' . $pending_poem['poem'] . '</td>
                                 <td scope=" row">' . $pending_poem['poet'] . '</td>
                             </tr>';
-                        }
                     }
+                }
                 ?>
-                
+
             </tbody>
         </table>
     </div>
     <hr class="style14">
     <div class="links">
-        <a target="_blank" href="https://github.com/ari-99/WaznUQafiya"
-            aria-placeholder="My Project is open-source! :)"><i class="fab fa-github"></i></a>
+        <a target="_blank" href="https://github.com/ari-99/WaznUQafiya" aria-placeholder="My Project is open-source! :)"><i class="fab fa-github"></i></a>
         <a target="_blank" href="https://www.facebook.com/ary56"><i class="fab fa-facebook"></i></a>
         <a target="_blank" href="https://twitter.com/arriii99"><i class="fab fa-twitter"></i></a>
     </div>

@@ -4,3 +4,23 @@
 table{
     display: inline !important;
 }
+.header{
+    width: 99vw;
+    height: 300px;
+    background-color: #283847;
+    overflow: hidden;
+}
+.header div{
+    /* max-width: min-content; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#copyright{
+    all: unset;
+    color: whitesmoke;
+}
+#logo {
+    height: 200px;
+    width: 200px;
+}
